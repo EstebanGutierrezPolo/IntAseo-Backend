@@ -1,7 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import userRoutes from './src/routes/users/userRoutes.js'
-import cleaningRoutes from './src/routes/cleanings/cleaningRoutes.js'
+// import userRoutes from './src/routes/users/userRoutes.js'
+// import cleaningRoutes from './src/routes/cleanings/cleaningRoutes.js'
+import projectRoutes from './src/routes/projects/projectsRoutes.js'
 
 
 dotenv.config();
@@ -18,14 +19,18 @@ app.get("/", (req, res) => {
 /************USERS*****************/
 /**********************************/
 
-app.use("/users", userRoutes);
+// app.use("/users", userRoutes);
 
 
 /**********************************/
 /***********CLEANINGS**************/
 /**********************************/
 
-app.use("/cleanings", cleaningRoutes);
+// app.use("/cleanings", cleaningRoutes);
+
+
+app.use("/proyectos", projectRoutes);
+
 
 
 app.listen(PORT, () => {
