@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 // import userRoutes from './src/routes/users/userRoutes.js'
 // import cleaningRoutes from './src/routes/cleanings/cleaningRoutes.js'
 import projectRoutes from './src/routes/projects/projectsRoutes.js'
-
+import projectDetailRoutes from './src/routes/projects-detail/projectsRoutesDetail.js'
 
 dotenv.config();
 const app = express();
@@ -30,6 +30,8 @@ app.get("/", (req, res) => {
 
 
 app.use("/proyectos", projectRoutes);
+app.use("/proyectos-detalle", projectDetailRoutes);
+
 
 
 
