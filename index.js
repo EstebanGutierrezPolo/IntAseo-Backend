@@ -7,6 +7,8 @@ import projectRoutes from './src/routes/projects/projectsRoutes.js';
 import projectDetailRoutes from './src/routes/projects-detail/projectsRoutesDetail.js';
 import resumenRoutes from './src/routes/resumen/resumenRoutes.js';
 import dashboardRoutes from './src/routes/dashboardResumen/dahsboardResumen.js'
+
+import sectorRoutes from './src/routes/sectors/sectors.js'
 // import userRoutes from './src/routes/users/userRoutes.js'
 // import cleaningRoutes from './src/routes/cleanings/cleaningRoutes.js'
 
@@ -42,8 +44,7 @@ app.use("/proyectos", projectRoutes);
 app.use("/proyectos-detalle", projectDetailRoutes);
 app.use("/resumen", resumenRoutes);
 app.use("/dashboard", dashboardRoutes);
-
-
+app.use("/sectores", sectorRoutes);
 /**********************************/
 
 // Iniciar servidor

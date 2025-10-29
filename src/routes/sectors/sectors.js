@@ -1,5 +1,5 @@
-import getAllProjectsDetailController from "../../controllers/projects-detail/getAllProjectsDetailController.js";
-import GetOneProjectDetailController from "../../controllers/projects-detail/getOneProjectDetailModels.js";
+import getAllSectorsController from "../../controllers/sectors/getAllSectorsController.js";
+// import getOneSectorController from "../../controllers/sectors/getOneSectorController.js";
 
 import { Router } from "express";
 
@@ -8,10 +8,9 @@ const router = Router();
 /*****************/
 /*******GET*******/
 /*****************/
-router.get("/", getAllProjectsDetailController.getAllProjectsDetail);
+router.get("/", getAllSectorsController.getAllSectors);
 
-router.get("/:id", GetOneProjectDetailController.getOneProjectDetail);
-// router.get("/:id", GetOneCleaningController.getOneCleaning);
+// router.get("/:id", getOneSectorController.getSector);
 
 /***************/
 /*****POST******/

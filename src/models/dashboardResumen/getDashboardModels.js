@@ -3,7 +3,7 @@ import pool from '../../middleware/connection.js'
 const getDashboardModels = {
     async getDashboardFunction() {
         try {
-            const query = 'SELECT * FROM vista_resumen_programas';
+            const query = 'SELECT * FROM vista_resumen_proyectos';
             const result = await pool.query(query);
             return result.rows || null; 
         } catch (error) {

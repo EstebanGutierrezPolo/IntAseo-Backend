@@ -1,9 +1,9 @@
 import pool from '../../middleware/connection.js'
 
-const getAllProjectsModels = {
-    async allProjects() {
+const getAllSectorsModel = {
+    async getSectors() {
         try {
-            const query = 'SELECT * FROM proyectos';
+            const query = 'SELECT * FROM vw_resumen_sectores';
             const result = await pool.query(query);
             return result.rows || null; 
         } catch (error) {
@@ -12,4 +12,4 @@ const getAllProjectsModels = {
     }
 }
 
-export default getAllProjectsModels;
+export default getAllSectorsModel;

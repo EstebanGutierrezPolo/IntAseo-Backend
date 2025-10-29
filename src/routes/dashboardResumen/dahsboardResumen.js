@@ -1,5 +1,5 @@
 import getDashboardController from "../../controllers/dashboardResumen/getDashboardController.js";
-
+import getOneDashboardController from "../../controllers/dashboardResumen/getOneDashboardController.js";
 
 import { Router } from "express";
 
@@ -9,7 +9,7 @@ const router = Router();
 /*******GET*******/
 /*****************/
 router.get("/", getDashboardController.getDashboard);
-// router.get("/:id", GetOneCleaningController.getOneCleaning);
+router.get("/:id", getOneDashboardController.getOneDashboard);
 
 /***************/
 /*****POST******/
