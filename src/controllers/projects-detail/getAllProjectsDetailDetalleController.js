@@ -1,15 +1,8 @@
-import getAllProjectDetailModels from "../../models/projects-detail/getAllProjectDetailModels.js"
-import getAllProjectDetailDetailModels from "../../models/projects-detail/getAllProjectDetailDetailModels.js"
+import getAllProjectDetailDetailModels from "../../models/projects-detail/getAllProjectDetailModels.js"
 
 const getAllProjectsDetailController = {
     async getAllProjectsDetail(req, res) {
         try {
-            const projects = await getAllProjectDetailModels.allProjectsDetail();
-            res.status(200).json({ 
-                success: true,
-                msg: "Projects retrieved successfully", 
-                projects
-            });
             const projectsDetail = await getAllProjectDetailDetailModels.allProjectsDetailDetail();
             res.status(200).json({ 
                 success: true,

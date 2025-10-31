@@ -41,6 +41,7 @@ app.get("/", (req, res) => {
 // app.use("/users", userRoutes);
 // app.use("/cleanings", cleaningRoutes);
 app.use("/proyectos", projectRoutes);
+app.use("/proyectos-barrios", projectDetailRoutes);
 app.use("/proyectos-detalle", projectDetailRoutes);
 app.use("/resumen", resumenRoutes);
 app.use("/dashboard", dashboardRoutes);

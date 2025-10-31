@@ -1,7 +1,5 @@
-import pool from '../../middleware/connection.js'
-
 const getAllProjectDetailDetailModels = {
-    async allProjectsDetail() {
+    async allProjectsDetailDetail() {
         try {
             const query = 'SELECT * FROM vista_proyectos_detallada_detalle';
             const result = await pool.query(query);
@@ -12,6 +10,4 @@ const getAllProjectDetailDetailModels = {
     }
 }
 
-
-;
 export default getAllProjectDetailDetailModels;
