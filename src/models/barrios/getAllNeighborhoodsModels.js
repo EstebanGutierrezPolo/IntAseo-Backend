@@ -1,9 +1,9 @@
 import pool from '../../middleware/connection.js'
 
-const getAllProjectsModels = {
-    async allProjects() {
+const getAllNeighborhoodsModels = {
+    async allNeighborhoods() {
         try {
-            const query = 'SELECT * FROM psql_p1';
+            const query = 'select * from barrios;';
             const result = await pool.query(query);
             return result.rows || null; 
         } catch (error) {
@@ -12,4 +12,4 @@ const getAllProjectsModels = {
     }
 }
 
-export default getAllProjectsModels;
+export default getAllNeighborhoodsModels;

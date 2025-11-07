@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 // Importar rutas
+import barriosRoutes from './src/routes/barrios/barriosRoutes.js';
 import projectRoutes from './src/routes/projects/projectsRoutes.js';
 import projectDetailRoutes from './src/routes/projects-detail/projectsRoutesDetail.js';
 import resumenRoutes from './src/routes/resumen/resumenRoutes.js';
@@ -41,6 +42,7 @@ app.get("/", (req, res) => {
 // app.use("/users", userRoutes);
 // app.use("/cleanings", cleaningRoutes);
 app.use("/proyectos", projectRoutes);
+app.use("/barrios", barriosRoutes);
 app.use("/proyectos-barrios", projectDetailRoutes);
 app.use("/proyectos-detalle", projectDetailRoutes);
 app.use("/resumen", resumenRoutes);
